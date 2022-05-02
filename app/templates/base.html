@@ -1,0 +1,45 @@
+{% from 'header.html' import header %}
+{% from 'help_window.html' import help %}
+{% from 'statistics.html' import stats %}
+
+{% from 'game.html' import game %}
+
+{% from 'footer.html' import footer %}
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='stylesheets/style.css') }}">
+        <script src="{{url_for('static', filename='javascript/java.js')}}"></script>
+
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    </head>
+
+
+
+    <div class="background">
+
+        
+    <div>
+        {% if current_user.is_anonymous %}
+        <a href="{{ url_for('login') }}">Login</a>
+        {% else %}
+        <a href="{{ url_for('logout') }}">Logout</a>
+        {% endif %}
+    </div>
+
+        {{ header() }}
+        {{ help() }}
+        {{ stats(played, wins, CStreak, MStreak) }}
+        {{ game() }}
+        {{ footer() }}
+    </div>
+    
+
+</html>
