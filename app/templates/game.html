@@ -1,0 +1,229 @@
+{% macro game() %}
+
+<div id="game">
+    <div class="game_window" id="game_window">
+        <div class="row">
+            <div class="collumn"> 
+                <div class="letter" id="L11"></div>
+            </div>
+
+            <div class="collumn">
+                <div class="letter" id="L12"></div>
+            </div>
+
+            <div class="collumn">
+                <div class="letter" id="L13"></div>
+            </div>
+
+            <div class="collumn">
+                <div class="letter" id="L14"></div>
+            </div>
+
+            <div class="collumn">
+                <div class="letter" id="L15"></div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="collumn"> 
+                <div class="letter" id="L21"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L22"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L23"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L24"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L25"></div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="collumn"> 
+                <div class="letter" id="L31"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L32"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L33"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L34"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L35"></div>
+            </div>
+
+        </div><div class="row">
+            <div class="collumn"> 
+                <div class="letter" id="L41"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L42"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L43"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L44"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L45"></div>
+            </div>
+
+        </div><div class="row">
+            <div class="collumn"> 
+                <div class="letter" id="L51"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L52"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L53"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L54"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L55"></div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="collumn"> 
+                <div class="letter" id="L61"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L62"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L63"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L64"></div>
+            </div>
+
+            <div class="collumn"> 
+                <div class="letter" id="L65"></div>
+        </div>
+
+    </div>
+    </div>
+
+
+    <div id="next_game" style="display: none;">
+        <br>
+    
+        <span id="win/loss">
+            wil or loss text
+        </span>
+        <br>
+        <br>
+        <!-- ADD GAME RESULT TO DB-->
+        <button style="color: black;" onclick="reset()">Play again?</button>
+        <br>
+    </div>
+
+    <div class="new_inputs">
+        <div class="letters_used" id="letters_used">
+            <label for=" ">LETTERS USED</label></br>
+            <div style="text-align: left;" id="used_letters">
+            </div>
+        </div>
+        </br>
+
+
+
+        <div class="keyboard_row" style="color: black;">
+            <button id="q" onclick="place_letter('Q')">Q</button>
+            <button id="w" onclick="place_letter('W')">W</button>
+            <button id="e" onclick="place_letter('E')">E</button>
+            <button id="r" onclick="place_letter('R')">R</button>
+            <button id="t" onclick="place_letter('T')">T</button>
+            <button id="y" onclick="place_letter('Y')">Y</button>
+            <button id="u" onclick="place_letter('U')">U</button>
+            <button id="i" onclick="place_letter('I')">I</button>
+            <button id="o" onclick="place_letter('O')">O</button>
+            <button id="p" onclick="place_letter('P')">P</button>
+        </div>
+        <div class="keyboard_row" style="color: black;">
+            <button id="a" onclick="place_letter('A')">A</button>
+            <button id="s" onclick="place_letter('S')">S</button>
+            <button id="d" onclick="place_letter('D')">D</button>
+            <button id="f" onclick="place_letter('F')">F</button>
+            <button id="g" onclick="place_letter('G')">G</button>
+            <button id="h" onclick="place_letter('H')">H</button>
+            <button id="j" onclick="place_letter('J')">J</button>
+            <button id="k" onclick="place_letter('K')">K</button>
+            <button id="l" onclick="place_letter('L')">L</button>
+        </div>
+        <div class="keyboard_row" style="color: black;">
+            <button id="enter"onclick="place_letter('Enter')" >ENTER</button>
+            <button id="z" onclick="place_letter('Z')">Z</button>
+            <button id="x" onclick="place_letter('X')">X</button>
+            <button id="c" onclick="place_letter('C')">C</button>
+            <button id="v" onclick="place_letter('V')">V</button>
+            <button id="b" onclick="place_letter('B')">B</button>
+            <button id="n" onclick="place_letter('N')">N</button>
+            <button id="m" onclick="place_letter('M')">M</button>
+            <button id="delete" onclick="place_letter(',')" ><<</button>
+
+           
+        </div>
+        
+
+        </br>
+        </br>
+    </div>
+
+
+    <div class="old_inputs">
+        <div id="game_inputs">
+            
+    
+            <div class="keyboard" id="keyboard">
+                
+                    
+    
+    
+                    <div style="color: black;">
+                        <button type="button" onclick="reset()" style="margin: 5px;"> Reset! </button>
+                    </div>
+                
+    
+    
+    
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+{% endmacro %}
