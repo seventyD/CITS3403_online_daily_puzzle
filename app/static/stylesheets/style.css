@@ -97,3 +97,101 @@ h1
     display: flex;
     justify-content: center;
 }
+
+.played
+{
+    width: 50px;
+    text-align: center;
+    padding: 50px;
+}
+
+.Wins
+{
+    width: 50px;
+    text-align: center;
+    padding: 50px;
+
+}
+.CStreak
+{
+    width: 50px;
+    text-align: center;
+    padding: 50px;
+
+}
+.MStreak
+{
+    width: 50px;
+    text-align: center;
+    padding: 50px;
+
+}
+
+
+
+.jumbotron
+{   
+    font-family: nyt-karnakcondensed;
+
+    padding:5px !important;
+    margin: auto;
+
+    background-size: cover;
+
+    border: 0px;
+    border-bottom: 2px;
+    border-style: solid;
+    border-color: #3a3a3c;
+
+ }
+
+.game_window
+{
+    height: 840px;
+    width: 700px;
+    border: 1px;
+    border-color: #3a3a3c;
+    border-style: solid;
+    display: block;
+    margin: auto;
+    margin-bottom: 100px;
+}
+.row
+{
+    justify-content: center;
+    margin: auto;
+    display: flex;
+}
+.collumn
+{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: 20px;
+    border: #3a3a3c;
+    border-style: solid;
+    
+    
+
+}
+
+.letter
+{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
+
+    font-size: xx-large;
+    
+
+}
+ .letters_used
+ {
+    display: block;
+    margin: auto;
+    width: 400px;
+ }
+ .footer
+ {
+     padding-bottom: 70%;
+ }
