@@ -1,0 +1,16 @@
+{% macro stats(played, wins, CStreak ,MStreak) %}
+
+<div class="stats_popup" id="stats_popup">
+    
+    <div class="stats_exit" onclick="close_stats();">X</div>
+    <div class="stats_title"> Statistics</div>
+    <div class="stats_info"> 
+        
+        <div class="played" id="played">{{played}} </br> Played</div>
+        <div  class="Wins" id="Wins">{{wins}} </br> Wins</div>
+        <div class="CStreak" id="CStreak">{{CStreak}} </br> Current Streak</div>
+        <div class="MStreak" id="MStreak">{{MStreak}} </br> Max Streak</div>
+    </div>
+</div>
+
+{% endmacro %}
