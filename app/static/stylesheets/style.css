@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: nyt-karnakcondensed;
     src: url('karnakcondensed-normal-700.woff');
@@ -29,6 +30,28 @@ h1
 }
 
 .help_button:hover
+{
+    color: grey;
+    cursor: pointer;
+}
+
+.help_popup
+{
+    color: white;
+    width: 500px;
+    margin: auto;
+    margin-bottom: 50px;
+    display: none;
+    transition: all 1s linear;
+
+}
+
+.help_exit
+{
+    float: right;
+}
+
+.help_exit:hover
 {
     color: grey;
     cursor: pointer;
@@ -147,15 +170,16 @@ h1
 
 .game_window
 {
-    height: 840px;
-    width: 700px;
+    width: 300px;
+    height: 380px;
+ 
     border: 1px;
     border-color: #3a3a3c;
     border-style: solid;
-    display: block;
     margin: auto;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
 }
+
 .row
 {
     justify-content: center;
@@ -164,10 +188,14 @@ h1
 }
 .collumn
 {
-    width: 100px;
-    height: 100px;
+    min-width: 50px;
+    min-height: 53px;
+    max-width: 50px;
+    max-height: 53px;
+    width: 10%;
+    height: 10%;
     text-align: center;
-    margin: 20px;
+    margin: 5px;
     border: #3a3a3c;
     border-style: solid;
     
@@ -177,8 +205,8 @@ h1
 
 .letter
 {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     
 
     font-size: xx-large;
@@ -193,5 +221,5 @@ h1
  }
  .footer
  {
-     padding-bottom: 70%;
+     padding-bottom: 10%;
  }
