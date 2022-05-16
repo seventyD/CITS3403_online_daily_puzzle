@@ -32,3 +32,16 @@ class Game(db.Model):
 
     def __repr__(self):
         return '<Stat {}>'.format(self.win)
+
+class Goal_words(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    date = db.Column(db.String(64))
+    asia = db.Column(db.String(64))
+    north_america = db.Column(db.String(64))
+    europe = db.Column(db.String(64))
+    africa = db.Column(db.String(64))
+    sounth_america = db.Column(db.String(64))
+    oceania = db.Column(db.String(64))
+
+    def __repr__(self):
+        return '<Stat {}>'.format(self.date)
