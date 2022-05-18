@@ -1,6 +1,7 @@
 {% from 'header.html' import header %}
 {% from 'help_window.html' import help %}
 {% from 'statistics.html' import stats %}
+{% from 'menu.html' import menu %}
 
 {% from 'game.html' import game %}
 
@@ -35,9 +36,18 @@
     </div>
 
         {{ header() }}
+
         {{ help() }}
+
+        <!--
+            CONINENT SELCTOR HERE
+            Will hide game until continent selected
+            parses continent to game
+        -->
         {{ stats(played, wins, CStreak, MStreak) }}
-        {{ game() }}
+        {{ menu() }}
+
+        {{ game(australia, africa, asia, europe, south_america, north_america) }}
         {{ footer() }}
     </div>
     

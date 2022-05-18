@@ -1,0 +1,32 @@
+{% macro menu() %}
+
+
+<div id=menu class="jumbotron text-center" style="background-color: #121213; color: white; ">
+
+    <div>
+            CHOSE CONTINENT
+    </div>
+    <br>
+
+    <div class="continent" onclick="select_continent('australia')">
+        AUSTRALIA
+    </div>
+    <div class="continent" onclick="select_continent('africa')">
+        AFRICA
+    </div>
+    <div class="continent" onclick="select_continent('asia')">
+        AISIA
+    </div>
+    <div class="continent" onclick="select_continent('europe')">
+        EUROPE
+    </div>
+    <div class="continent" onclick="select_continent('south_america')">
+        SOUTH AMERICA
+    </div>
+    <div class="continent" onclick="select_continent('north_america')">
+        NORTH AMERICA
+    </div>
+           
+</div>
+
+{% endmacro %}

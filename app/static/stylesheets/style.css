@@ -221,5 +221,27 @@ h1
  }
  .footer
  {
-     padding-bottom: 10%;
+     padding-bottom: 100%;
+ }
+
+ .continent
+ {
+    margin: auto;
+    width: 20%;
+
+ }
+ .continent:hover
+ {
+     color: #b59f3b;
+     background-color: #3a3a3c;
+ }
+
+ .goal_words
+ {
+     display: none
+ }
+ 
+ #game
+ {
+     display: none;
  }

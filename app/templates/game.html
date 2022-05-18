@@ -1,4 +1,5 @@
-{% macro game() %}
+{% macro game(australia, africa, asia, europe, south_america, north_america) %}
+
 
 <div id="game">
     <div class="game_window" id="game_window">
@@ -225,5 +226,26 @@
 
 </div>
 
+<div class="goal_words">
+    <div id="australia">
+        {{australia}}
+    </div>
+    <div id="africa">
+        {{africa}}
+    </div>
+    <div id="asia">
+        {{asia}}
+    </div>
+    <div id="europe">
+        {{europe}}
+    </div>
+    <div id="south_america">
+        {{south_america}}
+    </div>
+    <div id="north_america">
+        {{north_america}}
+    </div>
+    
+</div>
 
 {% endmacro %}

@@ -35,10 +35,29 @@ def index():
                 if CStreak > MStreak:
                     MStreak = CStreak
         
+
+
+    #REMOVE THIS LOOP AFTER TESTING!! IT GENERATES A NEW DAY AT LOGIN, DELETING IT WILL JUST GENERATE A NEW DAY EVERYDAY
+    for day in Goal_words.query.all():
+        db.session.delete(day)
+    db.session.commit()
+
+    #DONT DELETE THIS STUFF BELOW vvv
     #Check for date here, if not add new day
     if (not check_day()):
         new_day()
-    return render_template('base.html', played=played, wins=wins, CStreak=CStreak, MStreak=MStreak)
+
+    for day in Goal_words.query.all():
+        if str(date.today()) in str(day.date):
+            australia=day.australia
+            africa=day.africa
+            asia=day.asia
+            europe=day.europe
+            south_america=day.south_america
+            north_america=day.north_america
+
+            
+    return render_template('base.html', played=played, wins=wins, CStreak=CStreak, MStreak=MStreak, australia=australia, africa=africa, asia=asia, europe=europe, south_america=south_america, north_america=north_america)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

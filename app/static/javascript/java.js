@@ -29,12 +29,23 @@ function close_stats()
 }
 
 
-var goal_word = "CRANE";
+var goal_word = "ERROR";
 var turn_number = 0;
+var continunt = "asia";
+function select_continent(continent)
+{
+    continunt = continent;
+    document.getElementById("game").style.display = 'block';
+    document.getElementById("menu").style.display = 'none';
+
+}
+
+
+
+
 
 function init_game()
 {
-    goal_word = "TIGHT";
     turn_number = 0;
     var possible_words = [
         
@@ -379,10 +390,9 @@ function init_game()
     
     ];
     
-    //["SEVEN", "WORLD", "ABOUT", "AGAIN", "HEART", "PIZZA", "BRINE", "WATER", "HAPPY", "SIXTY", 'BOARD', 'MONTH', 'ANGEL', 'DEATH', 'GREEN', 'MUSIC', 'FIFTY', 'THREE', 'PARTY', 'PIANO', 'KELLY', 'MOUTH', 'WOMAN', 'SUGAR', 'AMBER', 'DREAM', 'APPLE', 'LAUGH', 'TIGER', 'FAITH', 'EARTH', 'RIVER', 'MONEY', 'PEACE', 'FORTY', 'WORDS', 'SMILE','ABATE', 'HOUSE', "ALONE", "WATCH", "LEMON", "SOUTH", "ERICA", "ANIME", "AFTER", "SANTA", "WOMEN", "ADMIN", "JESUS", "CHINA" ];
-    goal_word = possible_words[Math.floor(Math.random() * possible_words.length)];
+    goal_word = document.getElementById(continunt).innerText.slice(9, 14).toLowerCase();
+    
 }
-
 
 function guess_word(guess)
 {
@@ -391,8 +401,145 @@ function guess_word(guess)
     {
         init_game();
     }
-
+  
     var valid_words = [
+        "abobo",
+        "abuja",
+        "accra",
+        "adana",
+        "agram",
+        "akron",
+        "amman",
+        "aqaba",
+        "argos",
+        "arima",
+        "aswan",
+        "bahia",
+        "basel",
+        "bauru",
+        "bayda",
+        "belem",
+        "benha",
+        "berat",
+        "blida",
+        "brest",
+        "burra",
+        "busan",
+        "cairo",
+        "cerro",
+        "chico",
+        "colac",
+        "cusco",
+        "dacca",
+        "dakar",
+        "danli",
+        "deaar",
+        "delhi",
+        "depok",
+        "derby",
+        "derby",
+        "dover",
+        "enugu",
+        "erbil",
+        "fargo",
+        "genoa",
+        "gomel",
+        "gorky",
+        "gusau",
+        "haifa",
+        "hanoi",
+        "harar",
+        "hefei",
+        "herat",
+        "izmir",
+        "jassy",
+        "jedda",
+        "junin",
+        "kabul",
+        "karaj",
+        "kazan",
+        "khost",
+        "kiffa",
+        "kigali",
+        "kirov",
+        "kitwe",
+        "kosti",
+        "kursk",
+        "kyoto",
+        "lagos",
+        "laoag",
+        "lapaz",
+        "laval",
+        "leeds",
+        "levis",
+        "lhasa",
+        "lindi",
+        "luton",
+        "luxor",
+        "macau",
+        "meads",
+        "mecca",
+        "medan",
+        "miami",
+        "minsk",
+        "mixco",
+        "moora",
+        "mosul",
+        "nancy",
+        "natal",
+        "ndola",
+        "nyala",
+        "okene",
+        "omaha",
+        "osaka",
+        "otavi",
+        "paarl",
+        "pakse",
+        "paris",
+        "perth",
+        "porto",
+        "posen",
+        "praia",
+        "rabat",
+        "radom",
+        "rasht",
+        "reims",
+        "rocha",
+        "romsk",
+        "salem",
+        "salta",
+        "sanaa",
+        "seoul",
+        "sidon",
+        "siena",
+        "sirte",
+        "sofia",
+        "split",
+        "sucre",
+        "surat",
+        "tacna",
+        "talca",
+        "tampa",
+        "tempe",
+        "tepic",
+        "thies",
+        "tokyo",
+        "tours",
+        "tully",
+        "tulsa",
+        "tunis",
+        "tunja",
+        "turin",
+        "vaduz",
+        "varna",
+        "vidin",
+        "wajir",
+        "warri",
+        "worms",
+        "yalta",
+        "yaren",
+        "zadar",
+        "zaria",
         "abiko",
         "abuja",
         "accra",
