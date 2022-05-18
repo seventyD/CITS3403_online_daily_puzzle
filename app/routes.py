@@ -6,6 +6,9 @@ from flask_login import current_user, login_user, logout_user, login_required
 from app.models import Goal_words, User, Game
 from werkzeug.urls import url_parse
 from datetime import date
+import random
+
+
 
 @app.route('/')
 @app.route('/index')
@@ -33,6 +36,8 @@ def index():
                     MStreak = CStreak
         
     #Check for date here, if not add new day
+    if (not check_day()):
+        new_day()
     return render_template('base.html', played=played, wins=wins, CStreak=CStreak, MStreak=MStreak)
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -94,36 +99,47 @@ def get_javascript_data(jsdata):
 
     return jsdata
 
+
+
+def check_day():
+    for day in Goal_words.query.all():
+        if str(date.today()) in str(day.date):
+            return True
+    return False
+    
+
+
 def get_date():
-    date = 'today'
-    return date
+    return date.today()
 
 def get_asia():
-    city = 'perth'
+    city = random.choice(list(open('word_data/ASIA.csv')))
     return city
 
 def get_na():
-    city = 'perth'
+    city = random.choice(list(open('word_data/NORTH_AMERICA.csv')))
     return city
 
 def get_europe():
-    city = 'perth'
+    city = random.choice(list(open('word_data/EUROPE.csv')))
     return city
 
 def get_africa():
-    city = 'perth'
+    city = random.choice(list(open('word_data/AFRICA.csv')))
     return city
 
 def get_sa():
-    city = 'perth'
+    city = random.choice(list(open('word_data/SOUTH_AMERICA.csv')))
     return city
 
-def get_oceania():
-    city = 'perth'
+def get_australia():
+    city = random.choice(list(open('word_data/AUSTRALIA.csv')))
     return city
 
 
 def new_day():
-    g = Goal_words(date = get_date(), asia = get_asia(), north_america = get_na(), europe = get_europe(), africa = get_africa(), sounth_america = get_sa(), oceania = get_oceania())
+    g = Goal_words(date = get_date(), asia = get_asia(), north_america = get_na(), europe = get_europe(), africa = get_africa(), south_america = get_sa(), australia = get_australia())
+    #g = Goal_words(date = "2022-01-23", asia = get_asia(), north_america = get_na(), europe = get_europe(), africa = get_africa(), south_america = get_sa(), australia = get_australia())
+     
     db.session.add(g)
     db.session.commit()

@@ -40,8 +40,8 @@ class Goal_words(db.Model):
     north_america = db.Column(db.String(64))
     europe = db.Column(db.String(64))
     africa = db.Column(db.String(64))
-    sounth_america = db.Column(db.String(64))
-    oceania = db.Column(db.String(64))
+    south_america = db.Column(db.String(64))
+    australia = db.Column(db.String(64))
 
     def __repr__(self):
         return '<Stat {}>'.format(self.date)
