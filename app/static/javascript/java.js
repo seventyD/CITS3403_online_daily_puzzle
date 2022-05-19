@@ -391,6 +391,7 @@ function init_game()
     ];
     
     goal_word = document.getElementById(continunt).innerText.slice(9, 14).toLowerCase();
+    country = document.getElementById(continunt).innerText.slice(15, 35);
     
 }
 
@@ -6772,7 +6773,8 @@ function win_screen()
 {
     document.getElementById("next_game").style.display = "block";
     document.getElementById("game_inputs").style.display = "none";
-    document.getElementById("win/loss").innerHTML = "WINNER!!!!!"
+    document.getElementById("win/loss").innerHTML = "WINNER!!!!! </br> " + goal_word + " is a town in " + country;
+    $.get( "/index/<LOSS>" );
     $.get( "/index/<WIN>" );
 
 
@@ -6783,7 +6785,7 @@ function lose_screen(goal_word)
 {
     document.getElementById("next_game").style.display = "block";
     document.getElementById("game_inputs").style.display = "none";
-    document.getElementById("win/loss").innerHTML = "LOSER!!! </br> WORD WAS: " + goal_word;
+    document.getElementById("win/loss").innerHTML = "LOSER!!! </br> Correct town was " + goal_word + " in " + country;
     $.get( "/index/<LOSS>" );
     
 }

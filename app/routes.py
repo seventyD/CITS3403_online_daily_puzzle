@@ -9,7 +9,7 @@ from datetime import date
 import random
 
 
-
+app.debug = True
 @app.route('/')
 @app.route('/index')
 @login_required
