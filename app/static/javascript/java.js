@@ -6732,13 +6732,38 @@ function add_word(guess, turn_num)
         {
             if(goal_word[n] == guess[i])
                 {
-                    letters[i].style.backgroundColor = "#b59f3b";
                     letter_in_word = true;
-                    document.getElementById(guess[i]).style.backgroundColor = "#b59f3b";
-                    //document.getElementById(goal_word[i]).backgroundColor = "#b59f3b";
+                    //If letter appears more times in goal word than in guess word it wont be yellow
+                    if(i > 0){
+                        var instance_of_guess = 0
+                        for (let a = 0; a < i + 1; a++) {
+                            if(guess[i] == guess[a]) {
+                                instance_of_guess++
+                            }
+                        }
+                        var instance_of_goal = 0
+                        for (let b = 0; b < 5; b++) {
+                            if(guess[i] == goal_word[b]) {
+                                instance_of_goal++
+                            }
+                        }
+                        if(instance_of_guess > instance_of_goal){
+                            document.getElementById(guess[i]).style.backgroundColor = "#3a3a3c";
+    
+                        }
+                        else{
+                            letters[i].style.backgroundColor = "#b59f3b";
+                            document.getElementById(guess[i]).style.backgroundColor = "#b59f3b";
+    
+                        }
+                        }
                     break;
+                    //document.getElementById(goal_word[i]).backgroundColor = "#b59f3b";
+                    
                 }
         }
+        
+
         
         if(guess[i] == goal_word[i])
         {
