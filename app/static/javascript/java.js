@@ -1,3 +1,4 @@
+//Next 4 functions Open and close help / stats windows
 function open_help()
 {
     const help_window = document.getElementById("help_popup");
@@ -29,25 +30,68 @@ function close_stats()
 }
 
 
+
+//Main Logc vv
+//initialisation
 var goal_word = "ERROR";
 var turn_number = 0;
 var continunt = "asia";
+var saved_word = "";
+
+//Triggered when u select which continent you want to play
+//will check for any saves and put their data in or get ready for initialising a fresh game
 function select_continent(continent)
 {
     continunt = continent;
     document.getElementById("game").style.display = 'block';
     document.getElementById("menu").style.display = 'none';
+    saved_word = document.getElementById("s_"+continent).innerText.replace(/\s/g, '');
+
+
+    if(saved_word.length > 1)
+    {
+        if(saved_word.length >= 5)
+        {
+            splice = saved_word.slice(0,5);
+            guess_word(splice, true);
+        }
+
+        if(saved_word.length >= 10)
+        {
+            splice = saved_word.slice(5,10);
+            guess_word(splice, true);
+        }
+        if(saved_word.length >= 15)
+        {
+            splice = saved_word.slice(10,15);
+            guess_word(splice, true);
+        }
+
+        if(saved_word.length >= 20)
+        {
+            splice = saved_word.slice(15,20);
+            guess_word(splice, true);
+        }
+        if(saved_word.length >= 25)
+        {
+            splice = saved_word.slice(20,25);
+            guess_word(splice, true);
+        }
+
+        if(saved_word.length >= 30)
+        {
+            splice = saved_word.slice(25,30);
+            guess_word(splice, true);
+        }
+    }
 
 }
 
-
-
-
-
+//Initialising Game, Possible words may be deleted 
 function init_game()
 {
     turn_number = 0;
-    var possible_words = [
+   /* var possible_words = [
         
         "abiko",
         "abuja",
@@ -389,20 +433,24 @@ function init_game()
         "zunyi"
     
     ];
-    
+    */
+
     goal_word = document.getElementById(continunt).innerText.slice(9, 14).toLowerCase();
     country = document.getElementById(continunt).innerText.slice(15, 35);
     
+ 
 }
 
-function guess_word(guess)
+//Triggered once you attemted to submit a word, load boolean is to make sure when loading from a save, the save words arent counted twice
+function guess_word(guess, load)
 {
 
     if(turn_number == 0)
     {
         init_game();
     }
-  
+    
+    //This list of valid words should be in database to neaten things up and may help stop cheating too
     var valid_words = [
         "abobo",
         "abuja",
@@ -6640,22 +6688,57 @@ function guess_word(guess)
 
     ];
 
+    //If the word is valid, play the valid word
     if (!valid_words.includes(guess.toLowerCase()))   {alert("word not in list")}
     else
     {
 
         turn_number++;
-        add_word(guess.toLowerCase(), turn_number);
+        add_word(guess.toLowerCase(), turn_number, load);
 
     }
     guess.innerHTML = "";
 }
 
-function add_word(guess, turn_num)
+//Adds the move to the board and database
+function add_word(guess, turn_num, load)
 {
+    if(!load)
+    {
+        //Only ads to database if the word isnt comming from a save being loaded
+        saved_word += guess;
+    
+        if (continunt == "australia")
+        {
+            $.get( "/index/"+"aus_"+saved_word);
+        }
+        if (continunt == "asia")
+        {
+            $.get( "/index/"+"asi_"+saved_word);
+        }
+        if (continunt == "africa")
+        {
+            $.get( "/index/"+"afr_"+saved_word);
+        }
+        if (continunt == "europe")
+        {
+            $.get( "/index/"+"eur_"+saved_word);
+        }
+        if (continunt == "south_america")
+        {
+            $.get( "/index/"+"sou_"+saved_word);
+        }
+        if (continunt == "north_america")
+        {
+            $.get( "/index/"+"nor_"+saved_word);
+        }
+    }
+    
+
     const used = document.getElementById("used_letters");
     const letters = [];
 
+    //Finds right row to put word in
     if(turn_num == 1)
     {
         
@@ -6719,7 +6802,7 @@ function add_word(guess, turn_num)
     
 
 
-
+    //Adds each letter to board
     for (let i = 0; i < 5; i++) 
     {
 
@@ -6764,14 +6847,14 @@ function add_word(guess, turn_num)
         }
         
 
-        
+        //Changes color to grean if letter is in correct spot
         if(guess[i] == goal_word[i])
         {
             letters[i].style.backgroundColor = "#538d4e";
             document.getElementById(guess[i]).style.backgroundColor = "#538d4e";
         }
 
-
+        //Changes color to grey if letter is not in word
         if(letter_in_word == false)
         {
 
@@ -6787,6 +6870,7 @@ function add_word(guess, turn_num)
         }
     }
     
+    //Checking for end game state
     if(turn_number == 6) {lose_screen(goal_word);}
     if(guess == goal_word) {win_screen();}
 
@@ -6794,18 +6878,19 @@ function add_word(guess, turn_num)
 
 }
 
+//Congradulates winner, sends data to flask to add to db
 function win_screen()
 {
     document.getElementById("next_game").style.display = "block";
     document.getElementById("game_inputs").style.display = "none";
     document.getElementById("win/loss").innerHTML = "WINNER!!!!! </br> " + goal_word + " is a town in " + country;
-    $.get( "/index/<LOSS>" );
+    //$.get( "/index/<LOSS>" );
     $.get( "/index/<WIN>" );
 
 
 }
 
-
+//Congradulates loser, sends data to flask to add to db
 function lose_screen(goal_word)
 {
     document.getElementById("next_game").style.display = "block";
@@ -6815,13 +6900,13 @@ function lose_screen(goal_word)
     
 }
 
-
+//Easy refresh button
 function reset()
 {
     window.location.reload();
 }
 
-
+//Places the unconfirmed letters onto the board
 function place_letter(letter)
 {
     let letter_blocks = document.getElementsByClassName("letter");
@@ -6846,36 +6931,36 @@ function place_letter(letter)
                 if(letter_blocks[4].style.backgroundColor == '')
                 {
                     var guess = letter_blocks[0].innerHTML + letter_blocks[1].innerHTML + letter_blocks[2].innerHTML + letter_blocks[3].innerHTML + letter_blocks[4].innerHTML;
-                    guess_word(guess);
+                    guess_word(guess, false);
                 }
                 break;
             case 10:
                 if(letter_blocks[9].style.backgroundColor == '')
                 {
                     var guess = letter_blocks[5].innerHTML + letter_blocks[6].innerHTML + letter_blocks[7].innerHTML + letter_blocks[8].innerHTML + letter_blocks[9].innerHTML;
-                    guess_word(guess);            }
+                    guess_word(guess, false);            }
                 break;
             case 15:
                 if(letter_blocks[14].style.backgroundColor == '')
                 {
                     var guess = letter_blocks[10].innerHTML + letter_blocks[11].innerHTML + letter_blocks[12].innerHTML + letter_blocks[13].innerHTML + letter_blocks[14].innerHTML;
-                    guess_word(guess);            }
+                    guess_word(guess, false);            }
                 break;
             case 20:
                 if(letter_blocks[19].style.backgroundColor == '')
                 {
                     var guess = letter_blocks[15].innerHTML + letter_blocks[16].innerHTML + letter_blocks[17].innerHTML + letter_blocks[18].innerHTML + letter_blocks[19].innerHTML;
-                    guess_word(guess);            }
+                    guess_word(guess, false);            }
                 break;
             case 25:
                 if(letter_blocks[24].style.backgroundColor == '')
                 {
                     var guess = letter_blocks[20].innerHTML + letter_blocks[21].innerHTML + letter_blocks[22].innerHTML + letter_blocks[23].innerHTML + letter_blocks[24].innerHTML;
-                    guess_word(guess);            }
+                    guess_word(guess, false);            }
                 break;
             case 30:
                 var guess = letter_blocks[25].innerHTML + letter_blocks[26].innerHTML + letter_blocks[27].innerHTML + letter_blocks[28].innerHTML + letter_blocks[29].innerHTML;
-                guess_word(guess);
+                guess_word(guess, false);
                 break;
         }
     }
@@ -6933,9 +7018,8 @@ function place_letter(letter)
 }
 
 
-
+//Keyboard listener to then add letters to board, also takes mouse clicks on the screen keyboard
 document.addEventListener('keypress', logKey);
-
 function logKey(e) {
     let key = e.key;
     let valid_press = ['q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m','Q','W','E','R','T','Y','U','I','O','P','A','S','D','F','G','H','J','K','L','Z','X','C','V','B','N','M', 'Enter', ','];

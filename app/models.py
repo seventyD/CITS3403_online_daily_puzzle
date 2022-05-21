@@ -15,6 +15,8 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
     games = db.relationship('Game', backref='author', lazy='dynamic')
+    saves = db.relationship('Save', backref='author', lazy='dynamic')
+
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -45,3 +47,19 @@ class Goal_words(db.Model):
 
     def __repr__(self):
         return '<Stat {}>'.format(self.date)
+
+
+class Save(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    date = db.Column(db.String(64))
+    asia = db.Column(db.String(64), default="")
+    north_america = db.Column(db.String(64), default="")
+    europe = db.Column(db.String(64), default="")
+    africa = db.Column(db.String(64), default="")
+    south_america = db.Column(db.String(64), default="")
+    australia = db.Column(db.String(64), default="")
+
+    def __repr__(self):
+        return '<Stat {}>'.format(self.date)
+
