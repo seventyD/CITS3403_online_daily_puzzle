@@ -1,0 +1,246 @@
+* commit d0e45991bda94cf0e0200c55d5431d1be91dc2d6 (origin/main, origin/HEAD)
+| Author: Dylan Fellows <83196903+seventyD@users.noreply.github.com>
+| Date:   Sun May 22 19:17:31 2022 +0800
+| 
+|     Update README.md
+| 
+* commit feade2fc47e0e0706e4a792b3058596fd3497986 (HEAD -> main)
+| Author: IsaacM69 <22701047@student.uwa.edu.au>
+| Date:   Sun May 22 18:07:49 2022 +0800
+| 
+|     merge with testint branch
+|   
+*   commit d63bfe864bb9402283f9733ff6539bd336a87bc3
+|\  Merge: 73dce0b 24c4759
+| | Author: IsaacM69 <22701047@student.uwa.edu.au>
+| | Date:   Sun May 22 18:07:32 2022 +0800
+| | 
+| |     Merge remote-tracking branch 'origin/Testing'
+| | 
+| * commit 24c4759f5eb6cb17255962e54b0d0ec97c158346 (origin/Testing, Testing)
+| | Author: IsaacM69 <22701047@student.uwa.edu.au>
+| | Date:   Sun May 22 17:53:02 2022 +0800
+| | 
+| |     final
+| | 
+| * commit 099cf90b594954990163a8be38294b44187adb54
+| | Author: IsaacM69 <22701047@student.uwa.edu.au>
+| | Date:   Sun May 22 16:21:02 2022 +0800
+| | 
+| |     deleted print statement
+| | 
+| * commit 59fc5d754707d0e2151cfacae0bfe259557ad26b
+| | Author: IsaacM69 <22701047@student.uwa.edu.au>
+| | Date:   Sun May 22 16:20:29 2022 +0800
+| | 
+| |     tests work with data in database
+| | 
+| * commit e9e0dc16df899178a82dc1c81e464e6fae3a3e67
+| | Author: IsaacM69 <22701047@student.uwa.edu.au>
+| | Date:   Sun May 22 16:09:06 2022 +0800
+| | 
+| |     tests complete
+| | 
+| * commit 75477fd70f3aabf14734b18e332eb5d48368d2cd
+| | Author: IsaacM69 <22701047@student.uwa.edu.au>
+| | Date:   Sun May 22 12:31:38 2022 +0800
+| | 
+| |     first test commit
+| | 
+* | commit 73dce0b34b85803b4ace1781f13ebb5e4ad62f0b
+| | Author: Dylan Fellows <dylanfellows990@gmail.com>
+| | Date:   Sun May 22 16:22:55 2022 +0800
+| | 
+| |     bug fixes and font change
+| |   
+* |   commit 3abb938105cbdc478e6adc405d52ebbb8bf4dc82
+|\ \  Merge: ead5463 1004e55
+| | | Author: Dylan Fellows <dylanfellows990@gmail.com>
+| | | Date:   Sun May 22 16:06:32 2022 +0800
+| | | 
+| | |     Merge branch 'main' of https://github.com/seventyD/CITS3403_online_daily_puzzle
+| | | 
+| * | commit 1004e5521b86aec0e14d216a1e9da572b3448f51
+| | | Author: Dylan Fellows <83196903+seventyD@users.noreply.github.com>
+| | | Date:   Sun May 22 16:00:16 2022 +0800
+| | | 
+| | |     Update README.md
+| | | 
+* | | commit ead5463bbba180b97739cfbc9ad7ed08cea0050f
+|/ /  Author: Dylan Fellows <dylanfellows990@gmail.com>
+| |   Date:   Sun May 22 16:06:29 2022 +0800
+| |   
+| |       bug fixes
+| | 
+* | commit 33835aeab7d5b10e8408e391f390cb446f7c6237
+|/  Author: Dylan Fellows <dylanfellows990@gmail.com>
+|   Date:   Sun May 22 15:57:39 2022 +0800
+|   
+|       Social Media sharing and mobile support
+| 
+* commit 773a2814cb1f4e255a1f4e4b9e64e3139bdedece
+| Author: IsaacM69 <22701047@student.uwa.edu.au>
+| Date:   Sun May 22 12:29:48 2022 +0800
+| 
+|     final commit
+| 
+* commit fbcfc72dcdb95350cfc9c8fd24ba0d9eb0e2fa46
+| Author: Dylan Fellows <dylanfellows990@gmail.com>
+| Date:   Sun May 22 00:38:56 2022 +0800
+| 
+|     added save states
+| 
+* commit e0c98e0b53b4ead127053948c87f8dbacb16cd1d
+| Author: IsaacM69 <22701047@student.uwa.edu.au>
+| Date:   Fri May 20 13:11:32 2022 +0800
+| 
+|     bug fix
+| 
+* commit f99b7340334c877c208b5a94d4a55b9cfa81aa9a
+| Author: IsaacM69 <22701047@student.uwa.edu.au>
+| Date:   Thu May 19 19:29:01 2022 +0800
+| 
+|     fixed dylans spelling mistakes
+| 
+* commit 617a0a01a48c300f004a21a1980a8bcd009a24d5
+| Author: IsaacM69 <22701047@student.uwa.edu.au>
+| Date:   Thu May 19 19:20:38 2022 +0800
+| 
+|     added countries
+| 
+* commit df25424856c2a26a46466f4231c9dda11c74c42d
+| Author: Dylan Fellows <dylanfellows990@gmail.com>
+| Date:   Wed May 18 22:12:51 2022 +0800
+| 
+|     goal words react to db and date
+| 
+* commit 4b3a85c194242347a51d289aa86c0535dac99584
+| Author: Dylan Fellows <dylanfellows990@gmail.com>
+| Date:   Wed May 18 19:43:22 2022 +0800
+| 
+|     Generates Goal words each day
+| 
+* commit 7afd596192efe74672bb7fc11d90ea1609fbffad
+| Author: IsaacM69 <22701047@student.uwa.edu.au>
+| Date:   Tue May 17 19:59:31 2022 +0800
+| 
+|     continents
+| 
+* commit 4d168c5a4ab2e70f870f6832833a3cf4a3a366bd
+| Author: Dylan Fellows <dylanfellows990@gmail.com>
+| Date:   Mon May 16 16:45:07 2022 +0800
+| 
+|     db add for daily games per continent
+|   
+*   commit eedf7588e0022fd3ec0c6742e708f4b6c3cd9504
+|\  Merge: e6e2f54 63034ec
+| | Author: Dylan Fellows <dylanfellows990@gmail.com>
+| | Date:   Mon May 16 15:04:51 2022 +0800
+| | 
+| |     Merge branch 'main' of https://github.com/seventyD/CITS3403_online_daily_puzzle
+| | 
+| * commit 63034ecb472f1469b53d864106b1cbb940f67cfc
+| | Author: Dylan Fellows <83196903+seventyD@users.noreply.github.com>
+| | Date:   Tue May 10 10:12:02 2022 +0800
+| | 
+| |     Update README.md
+| | 
+| * commit d429dd176120d216c8fd6188d0032ce6649ecfed
+| | Author: Dylan Fellows <83196903+seventyD@users.noreply.github.com>
+| | Date:   Tue May 10 10:11:37 2022 +0800
+| | 
+| |     Create README.md
+| | 
+* | commit e6e2f54a9ef72a0920032b5e1d51107439499807
+|/  Author: Dylan Fellows <dylanfellows990@gmail.com>
+|   Date:   Mon May 16 15:04:46 2022 +0800
+|   
+|       word lists added
+| 
+* commit 308528380d2c8178388b5b6cf6c73a8dbbed8e15
+| Author: Dylan Fellows <dylanfellows990@gmail.com>
+| Date:   Tue May 10 10:07:53 2022 +0800
+| 
+|     requirements
+| 
+* commit 8bede773dd4184bfe06560c2165996acf2fa8247
+| Author: Dylan Fellows <dylanfellows990@gmail.com>
+| Date:   Tue May 10 10:07:40 2022 +0800
+| 
+|     java / css changes + requirements
+| 
+* commit 8348bca18687234cdfeced122dc315f39126ff6e
+| Author: Dylan Fellows <dylanfellows990@gmail.com>
+| Date:   Tue May 10 09:57:32 2022 +0800
+| 
+|     account registration
+| 
+* commit edca4ddf70b6717d2f5678b8f345f65207df3702
+| Author: IsaacM69 <22701047@student.uwa.edu.au>
+| Date:   Mon May 9 13:18:06 2022 +0800
+| 
+|     Added help window
+| 
+* commit a04cf6dad9ccc9f9d325ba2b1747bae609d1f842
+| Author: Dylan Fellows <dylanfellows990@gmail.com>
+| Date:   Mon May 9 12:46:33 2022 +0800
+| 
+|     more db work
+| 
+* commit 14e11bec60ead56de1a9b252a12617d75e17da7c
+| Author: Dylan Fellows <dylanfellows990@gmail.com>
+| Date:   Fri May 6 19:04:49 2022 +0800
+| 
+|     more db things
+| 
+* commit 503e23366d48102cfef468b26921f6eaa6532753
+| Author: Dylan Fellows <dylanfellows990@gmail.com>
+| Date:   Thu May 5 22:26:53 2022 +0800
+| 
+|     login db
+| 
+* commit 0b930383b5f62d8190aa4743631bdb53a9936f45
+| Author: IsaacM69 <22701047@student.uwa.edu.au>
+| Date:   Thu May 5 13:42:36 2022 +0800
+| 
+|     added acount base header 2 and finished javascript
+| 
+* commit d32d75274a3e6fc6554992d990c4199f5df88e80
+| Author: IsaacM69 <22701047@student.uwa.edu.au>
+| Date:   Thu May 5 12:47:22 2022 +0800
+| 
+|     add gitignore
+| 
+* commit 54651bbfbaf51712364afc82e342856debf9855e
+| Author: Dylan Fellows <dylanfellows990@gmail.com>
+| Date:   Wed May 4 11:04:14 2022 +0800
+| 
+|     routes & game
+| 
+* commit b1105b80881b0800e76fee7014e7849c433c6dc8
+| Author: IsaacM69 <22701047@student.uwa.edu.au>
+| Date:   Tue May 3 20:48:00 2022 +0800
+| 
+|     Added javascript and stylesheet
+| 
+* commit 61b2eab3866ca8e2eb9c3ea61e59f7846566f935
+| Author: Dylan Fellows <dylanfellows990@gmail.com>
+| Date:   Tue May 3 20:25:31 2022 +0800
+| 
+|     footer & header
+| 
+* commit ad0ec3305c9a917b0f977fd72e103a3274967e4d
+| Author: Dylan Fellows <dylanfellows990@gmail.com>
+| Date:   Mon May 2 10:11:24 2022 +0800
+| 
+* commit ea7128a4b797a5bbf94c070ff922030168bb3a32
+  Author: Dylan Fellows <dylanfellows990@gmail.com>
+  Date:   Thu Apr 14 10:07:14 2022 +0800
+  
+      base hello world
+  
+* commit 6ab64d72baac75b4c36ec41e061f7985447b0cc9 (origin/master)
+  Author: IsaacM69 <22701047@student.uwa.edu.au>
+  Date:   Tue May 3 20:43:23 2022 +0800
+  
+      first commit
