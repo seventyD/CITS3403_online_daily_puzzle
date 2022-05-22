@@ -6474,7 +6474,7 @@ function add_word(guess, turn_num, load)
                 {
                     letter_in_word = true;
                     //If letter appears more times in goal word than in guess word it wont be yellow
-                    if(i > 0){
+                    if(i >= 0){
                         var instance_of_guess = 0
                         for (let a = 0; a < i + 1; a++) {
                             if(guess[i] == guess[a]) {
@@ -6692,3 +6692,23 @@ function logKey(e) {
     }
     
 }
+
+//Copies stats to clipboard
+function copy_toclipboard() {
+
+    var Played = document.getElementById("played").innerText.replace(/[^\d]+/, "");
+    var Wins = document.getElementById("Wins").innerText.replace(/[^\d]+/, "");
+    var MStreak = document.getElementById("MStreak").innerText.replace(/[^\d]+/, "");
+    var CStreak =document.getElementById("CStreak").innerText.replace(/[^\d]+/, "");
+
+    /* Get the text field */
+    var copyText = "Current Towndle Stats: \n" + "Played: " + Played + " Wins: " + Wins + " Max Streak: " + MStreak + " Current Streak: " + CStreak ;
+  
+    /* Select the text field */
+
+     /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText);
+  
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText);
+  } 

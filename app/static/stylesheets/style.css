@@ -4,7 +4,22 @@
     src: url('karnakcondensed-normal-700.woff');
   }
 
+  .game{
+    overflow-x: hidden;
+}
 
+.head_2
+{
+    color: white;
+    text-align: center;
+
+}
+
+.loginout
+{
+    color: white;
+    text-align: center;
+}
 .background
 {
     background-color: #121213;
@@ -17,8 +32,10 @@
 h1
 {
     display: inline-block;
-    width: 100px;
+    /*width: 100px; */
     margin: 0 auto;
+    text-align: center;
+
 
 }
 
@@ -26,7 +43,7 @@ h1
 {
     padding-top: 10px;
     float: left;
-    width: 50px;
+    width: 5%;
 }
 
 .help_button:hover
@@ -38,7 +55,7 @@ h1
 .help_popup
 {
     color: white;
-    width: 500px;
+    width: 50%;
     margin: auto;
     margin-bottom: 50px;
     display: none;
@@ -76,7 +93,7 @@ h1
 {
     padding-top: 10px;
     float: right;
-    width: 50px;
+    width: 5%;
 }
 
 .stats_button:hover
@@ -88,7 +105,7 @@ h1
 .stats_popup
 {
     color: white;
-    width: 500px;
+    width: 30%;
     margin: auto;
     margin-bottom: 50px;
     display: none;
@@ -123,33 +140,36 @@ h1
 
 .played
 {
-    width: 50px;
+    width: 20%;
     text-align: center;
-    padding: 50px;
+    padding: 30%;
 }
 
 .Wins
 {
-    width: 50px;
+    width: 20%;
     text-align: center;
-    padding: 50px;
+    padding: 30%;
 
 }
 .CStreak
 {
-    width: 50px;
+    width: 20%;
     text-align: center;
-    padding: 50px;
+    padding: 30%;
 
 }
 .MStreak
 {
-    width: 50px;
+    width: 20%;
     text-align: center;
-    padding: 50px;
+    padding: 30%;
 
 }
-
+.socialbtn
+{
+    color: #121213;
+}
 
 
 .jumbotron
