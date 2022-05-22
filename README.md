@@ -18,4 +18,4 @@ QUICK START GUIDE: CMD
   Open http://127.0.0.1:5000
 
 How to run tests:
-
+ - python test_unittest.py
