@@ -38,7 +38,6 @@ class Test_TestModels(unittest.TestCase):
             final = k
         db.session.delete(final)
         db.session.commit()
-        print(Goal_words.query.all())
 
 
     def test_game(self):
