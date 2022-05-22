@@ -10,6 +10,7 @@ import random
 
 
 #Main Game Page - Only Accessable if logged in
+app.debug = True
 @app.route('/')
 @app.route('/index')
 @login_required
@@ -91,7 +92,8 @@ def login():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            error = 'Invalid username or password'
+            return render_template('login_base.html',error = error, form = form)
 
         login_user(user, remember=form.remember_me.data)
         next_page = request.args.get('next')

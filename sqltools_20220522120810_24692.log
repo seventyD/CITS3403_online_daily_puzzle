@@ -1,0 +1,28 @@
+22-05-22 12:08:13.8426707 pid:24692 tid:1 sqltools Critical: 0 : An unhandled exception occurred: System.IO.FileLoadException: Could not load file or assembly 'System.Reflection.Emit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'. The process cannot access the file because it is being used by another process. (0x80070020)
+File name: 'System.Reflection.Emit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+   at System.Xml.Serialization.CodeGenerator.CreateAssemblyBuilder
+   at System.Xml.Serialization.TempAssembly.GenerateRefEmitAssembly(XmlMapping[] xmlMappings, Type[] types, String defaultNamespace)
+   at System.Xml.Serialization.TempAssembly..ctor(XmlMapping[] xmlMappings, Type[] types, String defaultNamespace, String location)
+   at System.Xml.Serialization.XmlSerializer.GenerateTempAssembly(XmlMapping xmlMapping, Type type, String defaultNamespace, String location)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type, String defaultNamespace)
+   at Microsoft.SqlTools.ServiceLayer.ObjectExplorer.SmoModel.NodePathGenerator.Initialize() in D:\a\_work\1\s\src\Microsoft.SqlTools.ServiceLayer\ObjectExplorer\SmoModel\NodePathGenerator.cs:line 26
+   at Microsoft.SqlTools.ServiceLayer.ObjectExplorer.ObjectExplorerService..ctor() in D:\a\_work\1\s\src\Microsoft.SqlTools.ServiceLayer\ObjectExplorer\ObjectExplorerService.cs:line 62
+   at lambda_method110(Closure , LifetimeContext , CompositionOperation )
+   at System.Composition.TypedParts.ActivationFeatures.DisposalFeature.<>c__DisplayClass0_0.<RewriteActivator>b__0(LifetimeContext c, CompositionOperation o)
+   at System.Composition.Hosting.Providers.ImportMany.ImportManyExportDescriptorProvider.<>c__DisplayClass3_2`1.<GetImportManyDescriptor>b__4(ExportDescriptor e)
+   at System.Linq.Enumerable.SelectArrayIterator`2.ToArray()
+   at System.Composition.Hosting.Providers.ImportMany.ImportManyExportDescriptorProvider.<>c__DisplayClass3_1`1.<GetImportManyDescriptor>b__3(LifetimeContext c, CompositionOperation o)
+   at System.Composition.Hosting.Core.CompositionOperation.Run(LifetimeContext outermostLifetimeContext, CompositeActivator compositionRootActivator)
+   at System.Composition.Hosting.Core.LifetimeContext.TryGetExport(CompositionContract contract, Object& export)
+   at System.Composition.Hosting.CompositionHost.TryGetExport(CompositionContract contract, Object& export)
+   at System.Composition.CompositionContext.GetExport(CompositionContract contract)
+   at System.Composition.CompositionContext.GetExports(Type exportType, String contractName)
+   at System.Composition.CompositionContext.GetExports(Type exportType)
+   at Microsoft.SqlTools.Extensibility.ExtensionStore.GetExports[T]() in D:\a\_work\1\s\src\Microsoft.SqlTools.Hosting\Extensibility\ExtensionServiceProvider.cs:line 190
+   at Microsoft.SqlTools.Extensibility.ExtensionServiceProvider.<>c__DisplayClass8_0`1.<EnsureExtensionStoreRegistered>b__0() in D:\a\_work\1\s\src\Microsoft.SqlTools.Hosting\Extensibility\ExtensionServiceProvider.cs:line 115
+   at Microsoft.SqlTools.Extensibility.RegisteredServiceProvider.<>c__DisplayClass4_0`1.<Register>b__0() in D:\a\_work\1\s\src\Microsoft.SqlTools.Hosting\Extensibility\RegisteredServiceProvider.cs:line 73
+   at Microsoft.SqlTools.Extensibility.RegisteredServiceProvider.GetServicesImpl[T]() in D:\a\_work\1\s\src\Microsoft.SqlTools.Hosting\Extensibility\RegisteredServiceProvider.cs:line 105
+   at Microsoft.SqlTools.Extensibility.ExtensionServiceProvider.GetServicesImpl[T]() in D:\a\_work\1\s\src\Microsoft.SqlTools.Hosting\Extensibility\ExtensionServiceProvider.cs:line 107
+   at Microsoft.SqlTools.Extensibility.ServiceProviderBase.GetServices[T]() in D:\a\_work\1\s\src\Microsoft.SqlTools.Hosting\Extensibility\IMultiServiceProvider.cs:line 73
+   at Microsoft.SqlTools.ServiceLayer.HostLoader.InitializeHostedServices(RegisteredServiceProvider provider, IProtocolEndpoint host) in D:\a\_work\1\s\src\Microsoft.SqlTools.ServiceLayer\HostLoader.cs:line 184
+   at Microsoft.SqlTools.ServiceLayer.HostLoader.Initialize
