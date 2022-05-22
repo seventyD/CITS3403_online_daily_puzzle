@@ -46,7 +46,7 @@ function select_continent(continent)
     document.getElementById("game").style.display = 'block';
     document.getElementById("menu").style.display = 'none';
     saved_word = document.getElementById("s_"+continent).innerText.replace(/\s/g, '');
-
+    document.getElementById("current_continent").innerHTML += continent;
 
     if(saved_word.length > 1)
     {
@@ -6527,10 +6527,12 @@ function add_word(guess, turn_num, load)
         }
     }
     
-    //Checking for end game state
-    if(turn_number == 6) {lose_screen(goal_word);}
-    if(guess == goal_word) {win_screen();}
-
+    if(!load)
+    {
+        //Checking for end game state
+        if(turn_number == 6) {lose_screen(goal_word);}
+        if(guess == goal_word) {win_screen();}
+    }
 
 
 }

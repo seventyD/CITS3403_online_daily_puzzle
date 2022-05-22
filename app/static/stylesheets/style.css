@@ -1,7 +1,7 @@
 
 @font-face {
-    font-family: nyt-karnakcondensed;
-    src: url('karnakcondensed-normal-700.woff');
+    font-family: luckiest_guy;
+    src: url('LuckiestGuy-Regular.ttf');
   }
 
   .game{
@@ -25,7 +25,7 @@
     background-color: #121213;
     color: white;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: luckiest_guy;
     font-size: large;
 }
 
@@ -174,7 +174,7 @@ h1
 
 .jumbotron
 {   
-    font-family: nyt-karnakcondensed;
+    font-family: luckiest_guy;
 
     padding:5px !important;
     margin: auto;
