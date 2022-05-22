@@ -1,6 +1,6 @@
 # CITS3403_online_daily_puzzle
 #Dylan Fellows - 22731134
-#Isaac Muia - 22701047
+Isaac Muia - 22701047
 
 Development:
 For this project we were required to build an online daily puzzle, operating similar to Wordle.
