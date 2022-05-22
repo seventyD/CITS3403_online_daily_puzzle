@@ -1,4 +1,6 @@
 # CITS3403_online_daily_puzzle
+#Dylan Fellows - 22731134
+#Isaac Muia - 22701047
 Development:
 For this project we were required to build an online daily puzzle, operating similar to Wordle.
 The app is a short daily exercise that users do; the users recieve a score, or some kind of feedback; they can share their performance with others through social media or similar mechanisms; and they can track their progress and statistics. It is convenient and easy to play via mobile devices, and engaging enough for the users to want to return regulerly.
