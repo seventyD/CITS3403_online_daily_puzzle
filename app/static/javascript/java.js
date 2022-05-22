@@ -6676,7 +6676,7 @@ function place_letter(letter)
 
 
 //Keyboard listener to then add letters to board, also takes mouse clicks on the screen keyboard
-document.addEventListener('keypress', logKey);
+document.addEventListener('keydown', logKey);
 function logKey(e) {
     let key = e.key;
     let valid_press = ['q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m','Q','W','E','R','T','Y','U','I','O','P','A','S','D','F','G','H','J','K','L','Z','X','C','V','B','N','M', 'Enter', ','];
@@ -6689,6 +6689,12 @@ function logKey(e) {
 
             place_letter(key);
         }
+    }
+
+    if(e.keyCode == 8)
+    {
+        place_letter(",");
+
     }
     
 }
