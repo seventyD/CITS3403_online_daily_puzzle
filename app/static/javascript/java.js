@@ -6527,35 +6527,40 @@ function add_word(guess, turn_num, load)
         }
     }
     
-    if(!load)
-    {
-        //Checking for end game state
-        if(turn_number == 6) {lose_screen(goal_word);}
-        if(guess == goal_word) {win_screen();}
-    }
+    
+    //Checking for end game state
+    if(turn_number == 6) {lose_screen(goal_word, load);}
+    if(guess == goal_word) {win_screen(load);}
+   
 
 
 }
 
 //Congradulates winner, sends data to flask to add to db
-function win_screen()
+function win_screen(load)
 {
     document.getElementById("next_game").style.display = "block";
     document.getElementById("game_inputs").style.display = "none";
     document.getElementById("win/loss").innerHTML = "WINNER!!!!! </br> " + goal_word + " is a town in " + country;
     //$.get( "/index/<LOSS>" );
-    $.get( "/index/<WIN>" );
-
+    if(!load)
+    {
+        $.get( "/index/<WIN>" );
+    }
 
 }
 
 //Congradulates loser, sends data to flask to add to db
-function lose_screen(goal_word)
+function lose_screen(goal_word, load)
 {
     document.getElementById("next_game").style.display = "block";
     document.getElementById("game_inputs").style.display = "none";
     document.getElementById("win/loss").innerHTML = "LOSER!!! </br> Correct town was " + goal_word + " in " + country;
-    $.get( "/index/<LOSS>" );
+    if(!load)
+    {
+        $.get( "/index/<LOSS>" );
+
+    }
     
 }
 
